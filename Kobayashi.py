@@ -19,8 +19,9 @@ fod = now.strftime("%Y-%d-%m %H%M")
 fon = fod+".txt"
 fo = open(fon , 'a')
 
-fo.write("KOBAYASHI LOG")
-
+fo.write("KOBAYASHI LOG\n")
+fo.write("Date: ")
+fo.write(fod) 
 fo.write(intro)
 fo.write(vp)
 fo.write(vn)
@@ -57,7 +58,7 @@ kob = 'Kobayashi:'
 sys = 'System:'
 
 while myString != "end":
-    fo.write(myString);fo.write("\n")
+    fo.write("You:");fo.write(myString);fo.write("\n")
     if myString in greetings:
         a=greetings[random.randrange(0,10)]
         print kob,a
@@ -66,36 +67,67 @@ while myString != "end":
         print kob,a
         fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in hruForms:
-        print kob,hruReplies2[random.randrange(0,30)]
-        print kob,hruReplies1[random.randrange(0,6)]
+        a=hruReplies2[random.randrange(0,30)]
+        print kob,a
+        fo.write(kob);fo.write(a);fo.write("\n")
+        a=hruReplies1[random.randrange(0,6)]
+        print kob,a
+        fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in hruReplies1:
-        print kob,hruReplies2[random.randrange(0,30)]
+        a=hruReplies2[random.randrange(0,30)]
+        print kob,a
+        fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in times:
-        print kob,"i know the 2 times-table"
+        a="i know the 2 times-table"
+        print kob,a
+        fo.write(kob);fo.write(a);fo.write("\n")
     elif myString=="multiply":
-        print kob,"Multiplying..."
+        a="Multiplying..."
+        print kob,a
+        fo.write(sys);fo.write(a);fo.write("\n")
         for multiple in that:
+            a=multiple
             print multiple
+            fo.write(sys);fo.write(a);fo.write("\n")
     elif myString in byes:
-        print kob,byes[random.randrange(0,5)]
-        print sys,"type end to end"
+        a=byes[random.randrange(0,5)]
+        print kob,a
+        fo.write(kob);fo.write(a);fo.write("\n")
+        a="type end to end"
+        print sys,a
+        fo.write(sys);fo.write(a);fo.write("\n")
     elif myString in hruReplies2:
-        print kob,hrReplies[random.randrange(0,8)]
+        a=hrReplies[random.randrange(0,8)]
+        print kob,a
+        fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in hrReplies:
-        print kob,thanks[random.randrange(0,4)]
+        a=thanks[random.randrange(0,4)]
+        print kob,a
+        fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in thanks:
-        print kob,thanksReplies[random.randrange(0,8)]
+        a=thanksReplies[random.randrange(0,8)]
+        print kob,a
+        fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in thanksReplies:
-        print kob,smiles[random.randrange(0,6)]
-        a = kob,smiles[random.randrange(0,6)]
+        a = smiles[random.randrange(0,6)]
+        print kob,a
+        fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in smiles:
-        print kob,"No need for smilies"
+        a="No need for smilies"
+        print kob,a
+        fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in sReplies:
-        print kob,"Are you calling me a Hypocrite?"
+        a="Are you calling me a Hypocrite?"
+        print kob,a
+        fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in yes:
-        print kob,"lol"
+        a="lol"
+        print kob,a
+        fo.write(kob);fo.write(a);fo.write("\n")
     elif myString=="lol?":
-        print kob,"Yes, lol"
+        a="Yes, lol"
+        print kob,a
+        fo.write(kob);fo.write(a);fo.write("\n")
     elif myString=="test.all":
         print sys,"Testing All Lists"
         print sys,greetings
@@ -119,33 +151,61 @@ while myString != "end":
     elif myString=="bad":
         which=random.randrange(0,10)
         if which==0:
-            print kob,"is everything alright?"
+            a="is everything alright?"
+            print kob,a
+            fo.write(kob);fo.write(a);fo.write("\n")
         elif which==2:
-            print kob,"are you alright?"
+            a="are you alright?"
+            print kob,a
+            fo.write(kob);fo.write(a);fo.write("\n")
         elif which==4:
-            print kob,":( what's wrong?"
+            a=":( what's wrong?"
+            print kob,a
+            fo.write(kob);fo.write(a);fo.write("\n")
         elif which==6:
-            print kob,"what's wrong?"
+            a="what's wrong?"
+            print kob,a
+            fo.write(kob);fo.write(a);fo.write("\n")
         elif which==8:
-            print kob,"is it alright if I ask why?"
+            a="is it alright if I ask why?"
+            print kob,a
+            fo.write(kob);fo.write(a);fo.write("\n")
             myInput=raw_input("input:") #Asks for user to enter text
             if myInput in yes:
-                print kob,"sorry I won't ask then"
+                a="sorry I won't ask then"
+                print kob,a
+                fo.write(kob);fo.write(a);fo.write("\n")
             else:
-                print kob,"what is wrong then?"
+                a="what is wrong then?"
+                print kob,a
+                fo.write(kob);fo.write(a);fo.write("\n")
         elif which==10:
-            print kob,":("
+            a=":("
+            print kob,a
+            fo.write(kob);fo.write(a);fo.write("\n")
         else:
-            print kob,"sucks to be you"
+            a="sucks to be you"
+            print kob,a
+            fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in multiplyQ:
+        a=that
         print kob,that
+        fo.write(kob);fo.write(a);fo.write("\n")
     elif myString=="":
         print kob,"Well aren't you interesting"
+        fo.write(kob);fo.write(a);fo.write("\n")
     else:
-        print kob,unsure[random.randrange(0,4)]
+        a=unsure[random.randrange(0,4)]
+        print kob,a
+        fo.write(kob);fo.write(a);fo.write("\n")
     myString=raw_input("You:") #Asks for user to enter text
-print sys,"Ending..."
-print sys,"Saving Log"
+fo.write("You:");fo.write(myString);fo.write("\n")
+a="Ending..."
+print sys,a
+fo.write(sys);fo.write(a);fo.write("\n")
+a="Saving Log"
+print sys,a
+fo.write(sys);fo.write(a);fo.write("\n")
 fo.close()
 time.sleep(3)
 
