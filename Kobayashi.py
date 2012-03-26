@@ -6,6 +6,11 @@ Created on 22/03/2012
 import random
 import time
 import datetime
+import os
+path = "Logs"
+paths = "/"+path
+os.mkdir(paths)
+os.chdir(paths)
 vn = "1.1"
 vp = "InDev"
 version = vp, vn
