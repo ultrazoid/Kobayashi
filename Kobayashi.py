@@ -11,7 +11,7 @@ path = "Logs"
 paths = "/"+path
 os.mkdir(paths)
 os.chdir(paths)
-vn = "1.1"
+vn = "1.2"
 vp = "InDev"
 version = vp, vn
 version1 = "\n",vp,vn
