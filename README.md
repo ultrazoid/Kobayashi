@@ -1,6 +1,11 @@
 <h1>Kobayashi</h1>
 <h3>By ultrazoid_</h3>
-<b>Current Version:</b> Indev 1.2<br><br>
+<b>Current Version:</b> Indev 1.2<br>
+<b>Current Log Checker Version:</b> 1.0<br>
+<h3>Current Issues Being looked At:</h3>
+<ul>
+<li>Nil</li>
+</ul>
 <h3>Change Log</h3>
 <b>Indev 1.2:</b><br>
 <ul>
