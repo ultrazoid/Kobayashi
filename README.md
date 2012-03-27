@@ -11,6 +11,7 @@
 <li>If the program crashes the file will not save</li>
 </ul>
 </ul>
+</ul>
 <h3>Change Log</h3>
 <b>InDev 1.3.2</b>
 <br><b>WARNING: THIS VERSION IS NOT COMPLETELY WORKING
@@ -19,6 +20,7 @@
 <li>Fixed 'only' errors</li>
 <li>Re-did greetings list</li>
 <li>Continued moving lists out of main .py file</li>
+</ul>
 <b>InDev 1.3.1</b><br>
 <ul>
 <li>Removed 3.67GB .txt file</li>
