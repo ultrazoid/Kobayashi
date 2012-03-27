@@ -13,6 +13,7 @@
 <li>Fixed Memory error due to said .txt file</li>
 <li>Began moving lists out of main .py file</li>
 <li>Fixed Read error</li>
+</ul>
 <b>Indev 1.2:</b><br>
 <ul>
 <li>Changed file directory for Logs</li>
