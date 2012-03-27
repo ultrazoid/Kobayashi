@@ -7,11 +7,12 @@ import random
 import time
 import datetime
 import os
+'''
 path = "Logs"
 paths = "/"+path
-os.mkdir(paths)
 os.chdir(paths)
-vn = "1.2"
+'''
+vn = "1.3.2"
 vp = "InDev"
 version = vp, vn
 version1 = "\n",vp,vn
@@ -35,17 +36,34 @@ fo.write("\n")
 
 print now.strftime("%Y-%d-%m %H%M")
 print intro1,vp,vn,intro3
-myString=raw_input("Type hi to start:") #Asks for user to enter text
 
-greetings = ["hi","hello","Hello","Hi","gday","Gday","G'day","Bonjour","Hallo","Dia duit"]
-hruForms = ["how are you", "hru","how r you","how are u","how r u"," How r you","How are you",]
-hruReplies1 = ["and you","and u","And you","And u","Et toi","et toi"]
+fc = open("greetings.txt",'r')
+fg = fc.readlines()
+greetings = []
+nn=0
+for line in fg:
+    greetings.insert(nn,line)
+    nn=nn+1
+fc = open("hruForms.txt",'r')
+fh = fc.readlines()
+hruForms = []
+nn=0
+for line in fh:
+    hruForms.insert(nn,line)
+    nn=nn+1
+fd = open("hruReplies1.txt",'r')
+fhr1 = fd.readlines()
+hruReplies1 = []
+nn=0
+for line in fhr1:
+    hruReplies1.insert(nn,line)
+    nn=nn+1
 hruReplies2 = ["im good","i'm good","Im good","I'm good","i am good","I am good","good thanks","good thanx",
                "good thank you","good","Good","Good thanks","Good thanx","Good thank you","im good thanks","i'm good thanks",
                "Im good thanks","I'm good thanks","i am good thanks","I am good thanks","im good thanx",
                "i'm good thanx","Im good thanx","I'm good thanx","i am good thanx","I am good thanx",
                "im good thank you","i'm good thank you","Im good thank you","I'm good thank you",
-               "i am good  thank you","I am good thank you"]
+               "i am good  thank you","I am good thank you","good"]
 hrReplies = ["thats good","Thats good","that's good","That's good","thats good to hear","Thats good to hear",
              "that's good to hear","That's good to hear"]
 thanks = ["thank you", "thanks","thanx","why thank you"]
@@ -62,24 +80,26 @@ that = [2*1,2*2,2*3,2*4,2*5,2*6,2*7,2*8,2*9,2*10,2*11,2*12]
 kob = 'Kobayashi:'
 sys = 'System:'
 
-while myString != "end":
+myString=raw_input("Type hi to start:")+'\n' #Asks for user to enter text
+
+while myString != "end\n":
     fo.write("You:");fo.write(myString);fo.write("\n")
     if myString in greetings:
-        a=greetings[random.randrange(0,10)]
+        a=greetings[random.randrange(0,len(greetings))]
         print kob,a
-        fo.write(kob);fo.write(a);fo.write("\n")
-        a=hruForms[random.randrange(0,2)]
+        fo.write(kob);fo.write(a)
+        a=hruForms[random.randrange(0,len(hruForms))]
         print kob,a
         fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in hruForms:
-        a=hruReplies2[random.randrange(0,30)]
+        a=hruReplies2[random.randrange(0,len(hruForms))]
         print kob,a
         fo.write(kob);fo.write(a);fo.write("\n")
-        a=hruReplies1[random.randrange(0,6)]
+        a=hruReplies1[random.randrange(0,len(hruReplies1))]
         print kob,a
         fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in hruReplies1:
-        a=hruReplies2[random.randrange(0,30)]
+        a=hruReplies2[random.randrange(0,len(hruReplies2))]
         print kob,a
         fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in times:
@@ -95,26 +115,26 @@ while myString != "end":
             print multiple
             fo.write(sys);fo.write(a);fo.write("\n")
     elif myString in byes:
-        a=byes[random.randrange(0,5)]
+        a=byes[random.randrange(0,len(byes))]
         print kob,a
         fo.write(kob);fo.write(a);fo.write("\n")
         a="type end to end"
         print sys,a
         fo.write(sys);fo.write(a);fo.write("\n")
     elif myString in hruReplies2:
-        a=hrReplies[random.randrange(0,8)]
+        a=hrReplies[random.randrange(0,len(hrReplies))]
         print kob,a
         fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in hrReplies:
-        a=thanks[random.randrange(0,4)]
+        a=thanks[random.randrange(0,len(thanks))]
         print kob,a
         fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in thanks:
-        a=thanksReplies[random.randrange(0,8)]
+        a=thanksReplies[random.randrange(0,len(thanksReplies))]
         print kob,a
         fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in thanksReplies:
-        a = smiles[random.randrange(0,6)]
+        a = smiles[random.randrange(0,len(smiles))]
         print kob,a
         fo.write(kob);fo.write(a);fo.write("\n")
     elif myString in smiles:
@@ -133,7 +153,7 @@ while myString != "end":
         a="Yes, lol"
         print kob,a
         fo.write(kob);fo.write(a);fo.write("\n")
-    elif myString=="test.all":
+    elif myString=="test.all\n":
         print sys,"Testing All Lists"
         print sys,greetings
         print sys,hruForms
@@ -200,10 +220,10 @@ while myString != "end":
         print kob,"Well aren't you interesting"
         fo.write(kob);fo.write(a);fo.write("\n")
     else:
-        a=unsure[random.randrange(0,4)]
+        a=unsure[random.randrange(0,len(unsure))]
         print kob,a
         fo.write(kob);fo.write(a);fo.write("\n")
-    myString=raw_input("You:") #Asks for user to enter text
+    myString=raw_input("You:")+'\n' #Asks for user to enter text
 fo.write("You:");fo.write(myString);fo.write("\n")
 a="Ending..."
 print sys,a
