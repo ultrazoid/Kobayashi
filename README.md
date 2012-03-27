@@ -1,13 +1,18 @@
 <h1>Kobayashi</h1>
 <h3>By ultrazoid_</h3>
-<b>Current Version:</b> InDev 1.2<br>
+<b>Current Version:</b> InDev 1.3.1<br>
 <b>Current Log Checker Version:</b> 1.0<br>
 <h3>Current Issues Being looked At:</h3>
 <ul>
-<li>Memory Error (InDev 1.3)</li>
-<li>Not reading properly from data files (InDev 1.3)</li
+<li>Redoing Greetings list</li>
 </ul>
 <h3>Change Log</h3>
+<b>InDev 1.3.1</b><br>
+<ul>
+<li>Removed 3.67GB .txt file</li>
+<li>Fixed Memory error due to said .txt file</li>
+<li>Began moving lists out of main .py file</li>
+<li>Fixed Read error</li>
 <b>Indev 1.2:</b><br>
 <ul>
 <li>Changed file directory for Logs</li>
