@@ -5,7 +5,7 @@
 <h3>WHEN THE CHATBOT HAS A WORKING VERSION IT WILL BE RELEASED ON A WEBSITE(TO BE RELEASED SOON)</h3>
 <h3>Current Issues Being looked At:</h3>
 Please check the issues tab for resolved issues and to report an issue :)<br>
-All report issues will be refferred to Klapperen and will not be fixed in Kobayashi
+All reported issues will be refferred to Klapperen and will not be fixed in Kobayashi
 <h3>Change Log</h3>
 <b>InDev 1.3.2</b>
 <br><b>WARNING: THIS VERSION IS NOT COMPLETELY WORKING
